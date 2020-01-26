@@ -67,10 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controllers\mainController.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Views\Resources\Css\CustomeCss.css" />
+    <Content Include="Views\Resources\Images\logo %286.1%29.png" />
+    <Content Include="Views\Resources\Js\CustomeJs.js" />
+    <Content Include="Views\Resources\SVGs\logo %286.1%29.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\mainController.aspx.cs">
+      <DependentUpon>mainController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\mainController.aspx.designer.cs">
+      <DependentUpon>mainController.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -78,6 +90,7 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\MainModelClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,14 +102,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\Resources\Css\" />
-    <Folder Include="Views\Resources\Images\" />
-    <Folder Include="Views\Resources\Js\" />
-    <Folder Include="Views\Resources\SVGs\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
